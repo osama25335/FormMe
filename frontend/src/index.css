@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); 
+@import "tailwindcss";
+
+@theme {
+    
+    --font-primary-font: "Poppins", sans-serif;
+    --font-body-font: "Inter", sans-serif;
+
+    --color-background-color:#FEFEFE;
+
+    --color-primary-color-hover:rgba(16, 185, 129, 0.9);
+    --color-primary-color:#10B981;
+    
+    --color-secondary-lighter:#D2D4D7; 
+    --color-secondary-light:#626973;
+    
+    --color-secondary-xlight:rgb( 2, 0, 36, 0.3);
+    --color-secondary-xlight-hover:rgb( 2, 0, 36, 0.35);
+
+    --color-secondary-color:#1F2937;
+    --color-secondary-color-hover:rgb(31, 41, 55, 0.9);
+
+    --color-secondary-dark:#18202C;
+
+    --color-redPdf:#FF0000;
+}
+/* text size color fonts */
+body{
+    background-color: var(--color-background-color);
+    font-family: var(--font-body-font);
+}
+ h1, h2, h3, h4, h5, h6, p, a{
+  display: inline-block !important;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide {
+  animation: slide 30s linear infinite;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
