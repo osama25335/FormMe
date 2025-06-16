@@ -10,7 +10,7 @@ import messageRoutes from "./routes/message.route.js"
 
 dotenv.config();
 const PORT = process.env.PORT;
-const __direname = path.resolve();
+const __dirname = path.resolve();
 const app = express();
 
 app.use(express.json());
