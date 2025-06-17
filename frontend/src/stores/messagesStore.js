@@ -38,7 +38,7 @@ export const messagesStore = create((set, get) => ({
     deleteRequest: async (_id)=>{
         set({isDeleting: true});
         try {
-            const res = await axiosInstant.delete(`/messages/deleterequest/${_id}`);
+            const res = await axiosInstant.post("/messages/deleterequest",{_id});
             toast.success('the request is deleting.');
         } catch (error) {
             toast.error('Your request not deleting');

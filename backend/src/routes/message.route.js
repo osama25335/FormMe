@@ -6,7 +6,7 @@ import { upload } from "../lib/multer.js";
 const router= express.Router();
 router.get('/getrequests',protectRoute, getRequests);
 router.post('/sendrequest',upload.array('files'), sendRequest);
-router.delete('/deleterequest/:_id',protectRoute, deleteRequest);
+router.post('/deleterequest',protectRoute, deleteRequest);
 
 
 export default router;

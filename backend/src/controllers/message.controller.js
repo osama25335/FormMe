@@ -54,7 +54,7 @@ export const sendRequest = async (req,res)=>{
 export const deleteRequest = async (req, res) => {
 
   try {
-    const { _id } = req.params;
+    const {_id}  = req.body;
 
     if (!mongoose.Types.ObjectId.isValid(_id)) {
       return res.status(400).json({ error: "Invalid ID format" });
