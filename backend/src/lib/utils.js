@@ -8,7 +8,7 @@ export const generateToken = (userId, res) => {
         maxAge: 7 * 24 * 60 * 60 * 1000, //ms
         httpOnly: true, //prevent XSS attacks cros-site scripting attack
         sameSite: "strict", //csrf attack cros-site requist frogrey attacks 
-        secure: process.env.NODE_ENV !== "helloformeup" 
+        secure: process.env.NODE_ENV !== "development" 
     })
     return token;
 }
