@@ -4,14 +4,15 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import { connectDB } from "./lib/db.js";
 import path from "path"
+import { fileURLToPath } from "url";
 import authRoutes from "./routes/auth.route.js"
 import messageRoutes from "./routes/message.route.js"
 
 
 dotenv.config();
 const PORT = process.env.PORT;
-const __dirname = path.resolve();
-const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
