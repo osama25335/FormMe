@@ -39,8 +39,8 @@ const Categories = () => {
   };
 
   return (
-    <section id="categories">
-        <div className=" bg-background-color">
+    <section id="categories" >
+        <div className=" bg-backgroundSecd-color">
             <div className="container text-center mx-auto px-7 py-10">
                       {/* Arrows */}
                 <div className="relative w-full">

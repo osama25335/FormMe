@@ -7,7 +7,7 @@ export default function StepsDiscoverSection(){
 
     return(
     <>
-        <section id="steps">
+        <section id="steps" className="bg-backgroundSecd-color">
             <div className="container m-auto px-7 py-10">
                 <div className="text-center lg:text-left lg:w-1/2">
                     <span className="hidden lg:block"><Waypoints className="text-primary-color" strokeWidth={2.5} size={40} /></span>
