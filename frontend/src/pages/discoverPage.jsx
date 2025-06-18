@@ -6,7 +6,7 @@ export const DescoverStepsPage = ()=>{
     return(<>
     <Navbar/>
     <section>
-        <div className="container mx-auto mt-5 px-7 py-10 h-screen bg-[url(./public/bg-aboutus.jpeg)] bg-cover p-6 [&>h5]:text-secondary-color [&>h5]:font-semibold">
+        <div className="container mx-auto mt-5 px-7 py-10 h-screen bg-[url('./bg-aboutus.jpeg)'] bg-cover p-6 [&>h5]:text-secondary-color [&>h5]:font-semibold">
         <h2 className="font-body-font text-secondary-color font-bold text-2xl lg:text-4xl my-3">How FormMeUp Works</h2>
         <p className="text-secondary-light mb-5">FormMeUp is designed to simplify every step of your form journey — whether you're a business, an organization, or an individual user.</p>
         <h5> Secure Access:</h5>

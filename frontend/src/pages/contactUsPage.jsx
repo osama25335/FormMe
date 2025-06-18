@@ -44,7 +44,7 @@ export const ContactUsPage = ()=>{
 
 return(<>
     <Navbar/>
-    <section className="bg-[url(./public/bg-aboutus.jpeg)] bg-cover">
+    <section className="bg-[url('./bg-aboutus.jpeg')] bg-cover">
         <div className="container mx-auto mt-5 px-7 py-10 space-y-5">
             <div className="relative lg:w-1/2 mx-auto p-6 bg-white shadow-primary-color shadow-md rounded">
                  {isSending && <div className="absolute flex justify-center items-center z-50 inset-0 bg-secondary-xlight">

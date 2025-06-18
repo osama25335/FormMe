@@ -6,7 +6,7 @@ const AboutUsPage = () => {
     <>
     <Navbar/>
     <section id="aboutus">
-        <div className="container mx-auto my-5 px-7 py-10 bg-[url(./public/bg-aboutus.jpeg)] bg-contain bg-no-repeat space-y-5 ">
+        <div className="container mx-auto my-5 px-7 py-10 bg-[url('./bg-aboutus.jpeg')] bg-contain bg-no-repeat space-y-5 ">
             <div className="text-center md:text-left md:w-2/3">
                 <h2 className="font-body-font text-secondary-color font-bold text-2xl lg:text-4xl my-3">About Us</h2>
                 <p className="mb-4">

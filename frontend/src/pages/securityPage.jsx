@@ -6,7 +6,7 @@ export const SecurityPage = ()=>{
     return(<>
         <Navbar/>
         <section className="py-10">
-            <div className="container mx-auto mt-5 px-7 py-10 h-screen bg-[url(./public/bg-aboutus.jpeg)] bg-cover p-6 [&>h5]:text-secondary-color [&>h5]:font-semibold">
+            <div className="container mx-auto mt-5 px-7 py-10 h-screen bg-[url('./bg-aboutus.jpeg')] bg-cover p-6 [&>h5]:text-secondary-color [&>h5]:font-semibold">
                 <h2 className="font-body-font text-secondary-color font-bold text-2xl lg:text-4xl my-3">Secure & Convenient Form Access</h2>
                 <p className="text-secondary-light leading-5 mb-5"><span className="font-semibold"> Your Data, Your Control — Anytime, Anywhere </span><br />
                     At FormMeUp, we believe that seamless access should never come at the cost of security. That's why we've built our platform around robust, enterprise-grade security protocols that protect both form creators and form respondents at every stage of the process.</p>

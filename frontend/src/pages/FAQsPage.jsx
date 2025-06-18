@@ -44,7 +44,7 @@ const FAQs = () => {
   return (
     <>
         <Navbar/>
-            <div className="container mx-auto my-5 px-7 py-10 bg-[url(./public/bg-aboutus.jpeg)] bg-contain bg-no-repeat space-y-5">
+            <div className="container mx-auto my-5 px-7 py-10 bg-[url('./bg-aboutus.jpeg')] bg-contain bg-no-repeat space-y-5">
                 <div className='text-center md:text-left md:w-2/3'> 
                     <h1 className="text-3xl font-bold mb-8">Frequently Asked Questions</h1>
                     <div className="space-y-6">
