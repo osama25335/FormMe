@@ -13,14 +13,30 @@ export const ContactUsPage = ()=>{
     const fileInputRef = useRef(null);
 
     const handleFileChange = (e) => {
-      const selectedFiles = Array.from(e.target.files);
-      setFiles(selectedFiles); 
+    const selectedFiles = Array.from(e.target.files);
+    const maxTotalSize = 2 * 1024 * 1024; // 2MB in bytes
+    const totalSize = selectedFiles.reduce((sum, file) => sum + file.size, 0);
+    if (totalSize > maxTotalSize) {
+        toast.error("your file must under 2MB");
+        setFiles([]);
+        return;
+    }
+    setFiles(selectedFiles);
     }
 
     const removeFile = (idx) => {
       setFiles(files.filter((file, index)=>( idx != index)));
       if (fileInputRef.current) fileInputRef.current.value = "";
     };
+      const validateForm =()=>{
+    if (!formData.fullName.trim()) return toast.error("Full name is required");
+    if (!formData.email.trim()) return toast.error("Email is required");
+    if (!/\S+@\S+\.\S+/.test(formData.email)) return toast.error("Invalid email format");
+    if (!formData.password) return toast.error("Password is required");
+    if (formData.password.length < 6) return toast.error("Password must be at least 6 characters");
+  
+    return true;
+  }
     const handelSendMessage = async (e)=>{
       e.preventDefault();
       if(!usermessage || !useremail){
