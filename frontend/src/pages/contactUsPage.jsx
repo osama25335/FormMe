@@ -28,26 +28,27 @@ export const ContactUsPage = ()=>{
       setFiles(files.filter((file, index)=>( idx != index)));
       if (fileInputRef.current) fileInputRef.current.value = "";
     };
-      const validateForm =()=>{
-    if (!formData.fullName.trim()) return toast.error("Full name is required");
-    if (!formData.email.trim()) return toast.error("Email is required");
-    if (!/\S+@\S+\.\S+/.test(formData.email)) return toast.error("Invalid email format");
-    if (!formData.password) return toast.error("Password is required");
-    if (formData.password.length < 6) return toast.error("Password must be at least 6 characters");
-  
-    return true;
-  }
+    const validateForm =()=>{
+        if (!usermessage.trim()) return toast.error("your explain is required");
+        if (!useremail.trim()) return toast.error("Email is required");
+        if (!/\S+@\S+\.\S+/.test(useremail)) return toast.error("Invalid email format");
+
+        return true;
+    }
+    const hundelFormData = ()=>{
+        const formData = new FormData();
+        files.forEach((file) => formData.append("files", file));      
+        formData.append('usermessage', usermessage);
+        formData.append('useremail',useremail);
+
+        return formData;
+    }
     const handelSendMessage = async (e)=>{
       e.preventDefault();
-      if(!usermessage || !useremail){
-        toast.error("all fields are required the file is optional!");
-        return;
-      }
-      const formData = new FormData();
-      files.forEach((file) => formData.append("files", file));      
-      formData.append('usermessage', usermessage);
-      formData.append('useremail',useremail);
-        try {
+      const success = validateForm();
+      const formData=hundelFormData();
+      if (success === true) {
+         try {
           await sendRequest(formData);
           setUsermessage('');
           setUseremail('');
@@ -56,6 +57,8 @@ export const ContactUsPage = ()=>{
       } catch (error) {
         console.error("Failed to send message:", error);
       }
+      }
+       
     }
 
 return(<>
